@@ -14,10 +14,17 @@ namespace Bermuda.Model
         //public string IsPending { get; set; }
         //public string IsExecuted { get; set; }
         public string EventID { get; set; }
+        public int EventSequence { get; set; }
 
         public Event()
         {
 
+        }
+
+        public Event(int EventSeq, string EventLabel)
+        {
+            this.EventSequence = EventSeq;
+            this.EventLabel = EventLabel;
         }
 
         public Event(string EventID,string EventLabel)

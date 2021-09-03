@@ -11,6 +11,11 @@ namespace Bermuda.Model
         public Guid ScriptID { get; set; }
         public string Sql { get; set; }
 
+        public SqlScript()
+        {
+
+        }
+
         public SqlScript(string script)
         {
             this.Sql = script;

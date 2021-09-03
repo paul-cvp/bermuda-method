@@ -44,12 +44,17 @@ namespace Bermuda.Model
         [JsonConverter(typeof(ImageConverter))]
         public Image ImageData { get; set; }
 
+        public Screenshot()
+        {
+
+        }
+
         public Screenshot(Image image)
         {
             ImageData = image;
             ScreenshotID = new Guid();
         }
-        public Screenshot(Bitmap image, string path)
+        public Screenshot(Image image, string path)
         {
             ImagePath = path;
             ImageData = image;

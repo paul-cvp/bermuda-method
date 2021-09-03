@@ -16,7 +16,10 @@ namespace Bermuda
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Mapping());
+            //Application.Run(new Mapping());
+            Login login = new Login();
+            login.Show();
+            Application.Run();
         }
     }
 }

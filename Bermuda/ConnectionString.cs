@@ -26,7 +26,7 @@ namespace Bermuda
             string value = textBox2.Text;
             if (ApplicationContext.Instance.connectionStrings.Keys.Contains(name))
             {
-                MessageBox.Show("Connection string already exists!");
+                ApplicationContext.Instance.connectionStrings[name]= value;
             }
             else
             {

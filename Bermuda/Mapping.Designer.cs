@@ -74,7 +74,7 @@
             this.pbScreenshot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbScreenshot.TabIndex = 0;
             this.pbScreenshot.TabStop = false;
-            this.pbScreenshot.Click += new System.EventHandler(this.pbScreenshot_Click);
+            //this.pbScreenshot.Click += new System.EventHandler(this.pbScreenshot_Click);
             // 
             // richtbDbQuery
             // 
@@ -104,7 +104,7 @@
             this.buttonAddMappingToGraph.TabIndex = 5;
             this.buttonAddMappingToGraph.Text = "Add New Mapping";
             this.buttonAddMappingToGraph.UseVisualStyleBackColor = true;
-            this.buttonAddMappingToGraph.Click += new System.EventHandler(this.buttonAddMappingToGraph_Click);
+            //this.buttonAddMappingToGraph.Click += new System.EventHandler(this.buttonAddMappingToGraph_Click);
             // 
             // buttonRunOneSQL
             // 
@@ -114,7 +114,7 @@
             this.buttonRunOneSQL.TabIndex = 6;
             this.buttonRunOneSQL.Text = "Run Current SQL Script";
             this.buttonRunOneSQL.UseVisualStyleBackColor = true;
-            this.buttonRunOneSQL.Click += new System.EventHandler(this.buttonRunOneSQL_Click);
+            //this.buttonRunOneSQL.Click += new System.EventHandler(this.buttonRunOneSQL_Click);
             // 
             // buttonRunAllSQLInGraph
             // 
@@ -124,7 +124,7 @@
             this.buttonRunAllSQLInGraph.TabIndex = 7;
             this.buttonRunAllSQLInGraph.Text = "Run all Scripts from List";
             this.buttonRunAllSQLInGraph.UseVisualStyleBackColor = true;
-            this.buttonRunAllSQLInGraph.Click += new System.EventHandler(this.buttonRunAllSQLInGraph_Click);
+            //this.buttonRunAllSQLInGraph.Click += new System.EventHandler(this.buttonRunAllSQLInGraph_Click);
             // 
             // buttonSaveEventLog
             // 
@@ -134,7 +134,7 @@
             this.buttonSaveEventLog.TabIndex = 8;
             this.buttonSaveEventLog.Text = "Save Event Log Data";
             this.buttonSaveEventLog.UseVisualStyleBackColor = true;
-            this.buttonSaveEventLog.Click += new System.EventHandler(this.buttonSaveEventLog_Click);
+           // this.buttonSaveEventLog.Click += new System.EventHandler(this.buttonSaveEventLog_Click);
             // 
             // buttonSaveAll
             // 
@@ -144,7 +144,7 @@
             this.buttonSaveAll.TabIndex = 9;
             this.buttonSaveAll.Text = "Save Mapping to file";
             this.buttonSaveAll.UseVisualStyleBackColor = true;
-            this.buttonSaveAll.Click += new System.EventHandler(this.buttonSaveAll_Click);
+            //this.buttonSaveAll.Click += new System.EventHandler(this.buttonSaveAll_Click);
             // 
             // comboBoxSelectDbConnection
             // 
@@ -153,7 +153,7 @@
             this.comboBoxSelectDbConnection.Name = "comboBoxSelectDbConnection";
             this.comboBoxSelectDbConnection.Size = new System.Drawing.Size(235, 28);
             this.comboBoxSelectDbConnection.TabIndex = 10;
-            this.comboBoxSelectDbConnection.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxSelectDbConnection_MouseDown);
+            //this.comboBoxSelectDbConnection.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBoxSelectDbConnection_MouseDown);
             // 
             // buttonNewConnectionString
             // 
@@ -163,7 +163,7 @@
             this.buttonNewConnectionString.TabIndex = 11;
             this.buttonNewConnectionString.Text = "Manage Connections";
             this.buttonNewConnectionString.UseVisualStyleBackColor = true;
-            this.buttonNewConnectionString.Click += new System.EventHandler(this.buttonNewConnectionString_Click);
+            //this.buttonNewConnectionString.Click += new System.EventHandler(this.buttonNewConnectionString_Click);
             // 
             // rtbRegulatoryRules
             // 
@@ -183,7 +183,7 @@
             this.buttonReset.Text = "Clear All";
             this.buttonReset.UseVisualStyleBackColor = true;
             this.buttonReset.Visible = false;
-            this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
+            //this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
             // buttonImportDCREvents
             // 
@@ -193,7 +193,7 @@
             this.buttonImportDCREvents.TabIndex = 14;
             this.buttonImportDCREvents.Text = "Import Events from XML";
             this.buttonImportDCREvents.UseVisualStyleBackColor = true;
-            this.buttonImportDCREvents.Click += new System.EventHandler(this.buttonImportDCREvents_Click);
+            //this.buttonImportDCREvents.Click += new System.EventHandler(this.buttonImportDCREvents_Click);
             // 
             // dataGridViewEvents
             // 
@@ -212,10 +212,10 @@
             this.dataGridViewEvents.RowTemplate.Height = 28;
             this.dataGridViewEvents.Size = new System.Drawing.Size(1359, 727);
             this.dataGridViewEvents.TabIndex = 15;
-            this.dataGridViewEvents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEvents_CellContentClick);
-            this.dataGridViewEvents.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEvents_CellEndEdit);
-            this.dataGridViewEvents.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEvents_CellValueChanged);
-            this.dataGridViewEvents.SelectionChanged += new System.EventHandler(this.dataGridViewEvents_SelectionChanged);
+            //this.dataGridViewEvents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEvents_CellContentClick);
+            //this.dataGridViewEvents.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEvents_CellEndEdit);
+            //this.dataGridViewEvents.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEvents_CellValueChanged);
+            //this.dataGridViewEvents.SelectionChanged += new System.EventHandler(this.dataGridViewEvents_SelectionChanged);
             // 
             // EventID
             // 
@@ -316,7 +316,7 @@
             this.btnAddSql.TabIndex = 26;
             this.btnAddSql.Text = "Add SQL Script";
             this.btnAddSql.UseVisualStyleBackColor = true;
-            this.btnAddSql.Click += new System.EventHandler(this.btnAddSql_Click);
+            //this.btnAddSql.Click += new System.EventHandler(this.btnAddSql_Click);
             // 
             // btnAddScreenshot
             // 
@@ -326,7 +326,7 @@
             this.btnAddScreenshot.TabIndex = 25;
             this.btnAddScreenshot.Text = "Add Screenshot";
             this.btnAddScreenshot.UseVisualStyleBackColor = true;
-            this.btnAddScreenshot.Click += new System.EventHandler(this.btnAddScreenshot_Click);
+            //this.btnAddScreenshot.Click += new System.EventHandler(this.btnAddScreenshot_Click);
             // 
             // btnAddRule
             // 
@@ -336,7 +336,7 @@
             this.btnAddRule.TabIndex = 24;
             this.btnAddRule.Text = "Add Domain Event";
             this.btnAddRule.UseVisualStyleBackColor = true;
-            this.btnAddRule.Click += new System.EventHandler(this.btnAddRule_Click);
+            //this.btnAddRule.Click += new System.EventHandler(this.btnAddRule_Click);
             // 
             // groupBox2
             // 
@@ -374,9 +374,9 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Mapping";
             this.Text = "Mapping";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Mapping_FormClosing);
-            this.Load += new System.EventHandler(this.Mapping_Load);
-            this.Shown += new System.EventHandler(this.Mapping_Shown);
+            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Mapping_FormClosing);
+            //this.Load += new System.EventHandler(this.Mapping_Load);
+            //this.Shown += new System.EventHandler(this.Mapping_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pbScreenshot)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataFromSql)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEvents)).EndInit();

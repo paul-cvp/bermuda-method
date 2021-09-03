@@ -1,1 +1,1 @@
-# bermuda-framework
+# bermuda method

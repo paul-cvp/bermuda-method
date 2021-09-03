@@ -11,6 +11,11 @@ namespace Bermuda.Model
         public Guid RegulatoryRuleID { get; set; }
         public string RuleText { get; set; }
 
+        public RegulatoryRule()
+        {
+
+        }
+
         public RegulatoryRule(string ruleText)
         {
             this.RuleText = ruleText;
