@@ -961,5 +961,28 @@ namespace Bermuda
                 pbScreenshot.Image = Image.FromFile(filePath);
             }
         }
+
+        private void rtbRegulatoryRules_SelectionChanged(object sender, EventArgs e)
+        {
+            // Remember selection
+            int selstart = rtbRegulatoryRules.SelectionStart;
+            int sellength = rtbRegulatoryRules.SelectionLength;
+
+            // Set font of selected text
+            // You can use FontStyle.Bold | FontStyle.Italic to apply more than one style
+            if (sellength >= 2)
+            {
+                if (rtbRegulatoryRules.SelectionFont.Bold)
+                {
+                    rtbRegulatoryRules.SelectionFont = new Font(rtbRegulatoryRules.Font, FontStyle.Regular);
+                    rtbRegulatoryRules.SelectionBackColor = Color.White;
+                }
+                else
+                {
+                    rtbRegulatoryRules.SelectionFont = new Font(rtbRegulatoryRules.Font, FontStyle.Bold | FontStyle.Italic);
+                    rtbRegulatoryRules.SelectionBackColor = Color.LightYellow;
+                }
+            }
+        }
     }
 }

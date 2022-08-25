@@ -61,11 +61,6 @@ namespace Bermuda
             this.buttonRunAllSQLInGraph = new System.Windows.Forms.Button();
             this.buttonAddMappingToGraph = new System.Windows.Forms.Button();
             this.dataGridViewEvents = new System.Windows.Forms.DataGridView();
-            this.buttonImportDCREvents = new System.Windows.Forms.Button();
-            this.buttonReset = new System.Windows.Forms.Button();
-            this.buttonSaveAll = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.EventID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Activity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Domain = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,6 +69,11 @@ namespace Bermuda
             this.IsComplete = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Sequence = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonImportDCREvents = new System.Windows.Forms.Button();
+            this.buttonReset = new System.Windows.Forms.Button();
+            this.buttonSaveAll = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tabBermuda.SuspendLayout();
             this.tabPageUI.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbScreenshot)).BeginInit();
@@ -92,10 +92,10 @@ namespace Bermuda
             this.tabBermuda.Controls.Add(this.tabPageData);
             this.tabBermuda.Controls.Add(this.tabPageDomain);
             this.tabBermuda.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tabBermuda.Location = new System.Drawing.Point(0, 36);
+            this.tabBermuda.Location = new System.Drawing.Point(0, 33);
             this.tabBermuda.Name = "tabBermuda";
             this.tabBermuda.SelectedIndex = 0;
-            this.tabBermuda.Size = new System.Drawing.Size(1516, 458);
+            this.tabBermuda.Size = new System.Drawing.Size(1516, 456);
             this.tabBermuda.TabIndex = 0;
             // 
             // tabPageUI
@@ -108,8 +108,8 @@ namespace Bermuda
             this.tabPageUI.Controls.Add(this.pbScreenshot);
             this.tabPageUI.Location = new System.Drawing.Point(4, 29);
             this.tabPageUI.Name = "tabPageUI";
-            this.tabPageUI.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPageUI.Size = new System.Drawing.Size(1508, 425);
+            this.tabPageUI.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageUI.Size = new System.Drawing.Size(1508, 423);
             this.tabPageUI.TabIndex = 1;
             this.tabPageUI.Text = "User Interface";
             this.tabPageUI.UseVisualStyleBackColor = true;
@@ -185,7 +185,7 @@ namespace Bermuda
             this.tabPageData.Controls.Add(this.richtbDbQuery);
             this.tabPageData.Location = new System.Drawing.Point(4, 29);
             this.tabPageData.Name = "tabPageData";
-            this.tabPageData.Size = new System.Drawing.Size(1508, 425);
+            this.tabPageData.Size = new System.Drawing.Size(1508, 423);
             this.tabPageData.TabIndex = 2;
             this.tabPageData.Text = "Data";
             this.tabPageData.UseVisualStyleBackColor = true;
@@ -246,8 +246,8 @@ namespace Bermuda
             this.tabPageDomain.Controls.Add(this.btnAddRule);
             this.tabPageDomain.Location = new System.Drawing.Point(4, 29);
             this.tabPageDomain.Name = "tabPageDomain";
-            this.tabPageDomain.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPageDomain.Size = new System.Drawing.Size(1508, 425);
+            this.tabPageDomain.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageDomain.Size = new System.Drawing.Size(1508, 423);
             this.tabPageDomain.TabIndex = 0;
             this.tabPageDomain.Text = "Domain";
             this.tabPageDomain.UseVisualStyleBackColor = true;
@@ -269,6 +269,7 @@ namespace Bermuda
             this.rtbRegulatoryRules.Size = new System.Drawing.Size(673, 355);
             this.rtbRegulatoryRules.TabIndex = 21;
             this.rtbRegulatoryRules.Text = "";
+            this.rtbRegulatoryRules.SelectionChanged += new System.EventHandler(this.rtbRegulatoryRules_SelectionChanged);
             // 
             // btnAddRule
             // 
@@ -290,8 +291,7 @@ namespace Bermuda
             this.dataConnectionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1516, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(1516, 33);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -303,7 +303,7 @@ namespace Bermuda
             this.loadDomainModelToolStripMenuItem,
             this.loadBPMNDomainModelToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 32);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // loadMappingProjectToolStripMenuItem
@@ -339,7 +339,7 @@ namespace Bermuda
             this.userToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.logoutToolStripMenuItem});
             this.userToolStripMenuItem.Name = "userToolStripMenuItem";
-            this.userToolStripMenuItem.Size = new System.Drawing.Size(63, 32);
+            this.userToolStripMenuItem.Size = new System.Drawing.Size(63, 29);
             this.userToolStripMenuItem.Text = "User";
             // 
             // logoutToolStripMenuItem
@@ -354,7 +354,7 @@ namespace Bermuda
             this.dataConnectionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manageToolStripMenuItem});
             this.dataConnectionToolStripMenuItem.Name = "dataConnectionToolStripMenuItem";
-            this.dataConnectionToolStripMenuItem.Size = new System.Drawing.Size(160, 32);
+            this.dataConnectionToolStripMenuItem.Size = new System.Drawing.Size(160, 29);
             this.dataConnectionToolStripMenuItem.Text = "Data Connection";
             // 
             // manageToolStripMenuItem
@@ -398,9 +398,6 @@ namespace Bermuda
             // dataGridViewEvents
             // 
             this.dataGridViewEvents.AllowDrop = true;
-            this.dataGridViewEvents.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewEvents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewEvents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EventID,
@@ -411,11 +408,12 @@ namespace Bermuda
             this.IsComplete,
             this.Delete,
             this.Sequence});
-            this.dataGridViewEvents.Location = new System.Drawing.Point(16, 502);
+            this.dataGridViewEvents.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewEvents.Location = new System.Drawing.Point(0, 489);
             this.dataGridViewEvents.Name = "dataGridViewEvents";
             this.dataGridViewEvents.RowHeadersWidth = 62;
             this.dataGridViewEvents.RowTemplate.Height = 28;
-            this.dataGridViewEvents.Size = new System.Drawing.Size(1132, 749);
+            this.dataGridViewEvents.Size = new System.Drawing.Size(1516, 779);
             this.dataGridViewEvents.TabIndex = 31;
             this.dataGridViewEvents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEvents_CellContentClick);
             this.dataGridViewEvents.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEvents_CellContentDoubleClick);
@@ -425,61 +423,6 @@ namespace Bermuda
             this.dataGridViewEvents.DragOver += new System.Windows.Forms.DragEventHandler(this.dataGridViewEvents_DragOver);
             this.dataGridViewEvents.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridViewEvents_MouseDown);
             this.dataGridViewEvents.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dataGridViewEvents_MouseMove);
-            // 
-            // buttonImportDCREvents
-            // 
-            this.buttonImportDCREvents.Location = new System.Drawing.Point(51, 28);
-            this.buttonImportDCREvents.Name = "buttonImportDCREvents";
-            this.buttonImportDCREvents.Size = new System.Drawing.Size(213, 43);
-            this.buttonImportDCREvents.TabIndex = 30;
-            this.buttonImportDCREvents.Text = "Load DCR Domain Model";
-            this.buttonImportDCREvents.UseVisualStyleBackColor = true;
-            this.buttonImportDCREvents.Click += new System.EventHandler(this.buttonImportDCREvents_Click);
-            // 
-            // buttonReset
-            // 
-            this.buttonReset.Location = new System.Drawing.Point(51, 77);
-            this.buttonReset.Name = "buttonReset";
-            this.buttonReset.Size = new System.Drawing.Size(213, 43);
-            this.buttonReset.TabIndex = 29;
-            this.buttonReset.Text = "Clear All";
-            this.buttonReset.UseVisualStyleBackColor = true;
-            this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
-            // 
-            // buttonSaveAll
-            // 
-            this.buttonSaveAll.Location = new System.Drawing.Point(51, 126);
-            this.buttonSaveAll.Name = "buttonSaveAll";
-            this.buttonSaveAll.Size = new System.Drawing.Size(213, 43);
-            this.buttonSaveAll.TabIndex = 28;
-            this.buttonSaveAll.Text = "Save Mapping Project";
-            this.buttonSaveAll.UseVisualStyleBackColor = true;
-            this.buttonSaveAll.Click += new System.EventHandler(this.buttonSaveAll_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.buttonImportDCREvents);
-            this.groupBox1.Controls.Add(this.buttonReset);
-            this.groupBox1.Controls.Add(this.buttonSaveAll);
-            this.groupBox1.Location = new System.Drawing.Point(4, 142);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(351, 189);
-            this.groupBox1.TabIndex = 32;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Options";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.groupBoxAddAll3);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(1156, 494);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(360, 774);
-            this.panel1.TabIndex = 33;
             // 
             // EventID
             // 
@@ -540,15 +483,70 @@ namespace Bermuda
             this.Sequence.Name = "Sequence";
             this.Sequence.Width = 150;
             // 
+            // buttonImportDCREvents
+            // 
+            this.buttonImportDCREvents.Location = new System.Drawing.Point(51, 28);
+            this.buttonImportDCREvents.Name = "buttonImportDCREvents";
+            this.buttonImportDCREvents.Size = new System.Drawing.Size(213, 43);
+            this.buttonImportDCREvents.TabIndex = 30;
+            this.buttonImportDCREvents.Text = "Load DCR Domain Model";
+            this.buttonImportDCREvents.UseVisualStyleBackColor = true;
+            this.buttonImportDCREvents.Click += new System.EventHandler(this.buttonImportDCREvents_Click);
+            // 
+            // buttonReset
+            // 
+            this.buttonReset.Location = new System.Drawing.Point(51, 77);
+            this.buttonReset.Name = "buttonReset";
+            this.buttonReset.Size = new System.Drawing.Size(213, 43);
+            this.buttonReset.TabIndex = 29;
+            this.buttonReset.Text = "Clear All";
+            this.buttonReset.UseVisualStyleBackColor = true;
+            this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
+            // 
+            // buttonSaveAll
+            // 
+            this.buttonSaveAll.Location = new System.Drawing.Point(51, 126);
+            this.buttonSaveAll.Name = "buttonSaveAll";
+            this.buttonSaveAll.Size = new System.Drawing.Size(213, 43);
+            this.buttonSaveAll.TabIndex = 28;
+            this.buttonSaveAll.Text = "Save Mapping Project";
+            this.buttonSaveAll.UseVisualStyleBackColor = true;
+            this.buttonSaveAll.Click += new System.EventHandler(this.buttonSaveAll_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.buttonImportDCREvents);
+            this.groupBox1.Controls.Add(this.buttonReset);
+            this.groupBox1.Controls.Add(this.buttonSaveAll);
+            this.groupBox1.Location = new System.Drawing.Point(4, 142);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(351, 189);
+            this.groupBox1.TabIndex = 32;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Options";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.groupBoxAddAll3);
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1516, 1268);
+            this.panel1.TabIndex = 33;
+            // 
             // Bermuda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1516, 1268);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridViewEvents);
             this.Controls.Add(this.tabBermuda);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.panel1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Bermuda";
             this.Text = "Bermuda";
